@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block title %}Загрузка оборудования{% endblock %}
+{% block content %}
+
+<table>
+  <tr>
+    <td>Цех</td>
+    <td>Агрегатор</td>
+    {% for d in date %}
+      <td>{{d}}</td>
+    {% endfor %}
+  </tr>
+{% for c in annual %}
+
+        <tr>
+          <td>{{c.ws_name}}</td>
+          <td>{{c.u_name}}</td>
+          {% for i in c.lst_dig %}
+          <td style="
+            background: {% if i < 90 %} linear-gradient(to right, green 0%, green {{i}}%, white {{i}}%, white 100%) {% elif i <= 100 %} orange {% else %}silver{% endif %};
+          }
+          ">{{i}}</td>
+          {% endfor %}
+        </tr>
+
+{% endfor %}
+</table>
+
+
+{% endblock %}

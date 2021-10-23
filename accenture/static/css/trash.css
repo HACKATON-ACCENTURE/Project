@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	
+}
+
+.page {
+	background-color: #e1e1e1;
+	width: 100%;
+	height: 100vh;
+
+}
+
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.header {
+	width: 100%;	
+	position: absolute;	
+	padding-top: 20px;
+	top: 0;	
+	left: 0;	
+	right: 0;	
+	z-index: 1000;
+}
+
+.header__inner {
+	display: flex;	
+	justify-content: space-between;	
+	align-items: center;
+
+}
+
+.logo {
+	font-family: Arial, sans-serif;
+	font-weight: 700;	
+	font-size: 45px;
+	text-transform: uppercase;
+	color: #000;	
+}
+
+.nav {
+	font-family: Arial, sans-serif;
+	font-weight: 600;
+
+}
+
+.nav__link {
+	font-size: 24px;	
+	text-transform: uppercase;	
+	text-decoration: none;	
+	color: #000;
+	margin: 0 10px;
+	position: relative;	
+
+	transition: color .1s linear;
+}
+
+.nav__link:hover {
+	color: #ffffff;
+
+}
+
+
+
+.nav__link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	display: none;
+
+	background-color: #fff;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity .1s linear;
+}
+
+.nav__link:hover:after {
+	display: block;
+	opacity: 1;
+}
+
+.main {
+	width: 100%;	
+	position: absolute;	
+	padding-top: 200px;
+	top: 0;	
+	left: 0;	
+	right: 0;	
+	z-index: 1000;
+
+
+}
+
+.main__inner {
+	display: flex;
+	justify-content: space-between;
+	
+
+}
+
+
+
+.text {
+	width: 100%;
+	max-width: 120px;
+	text-align: center;
+	font-weight: 600;
+	font-family: Arial;
+	font-size: 17px;
+	margin-bottom: 7px;	
+}
+
+
+
+.image {
+	border-radius: 7px;
+	width: 120px;
+	height: 120px;
+	margin-bottom: 7px;	
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.btn {
+	width: 100%;
+	max-width: 117px;
+	height: auto;
+	text-align: left;
+	padding: 2px;
+	background-color: #fff;
+
+	border: 2px solid #5FD942;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 13px;
+	color: #000;
+
+	transition: color  .2s linear;
+	transition: background-color .2s linear;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: #2F4F4F;
+}
+
+
+.column {
+	display: flex;
+	flex-direction: column;
+}

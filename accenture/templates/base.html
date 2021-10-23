@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/trash.css' %}">
+  <meta charset="utf-8">
+
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#">self</a>
+          <a href="{% url 'index' %}"  class="nav__link"><h1 class="logo">Главная</h1></a>
+          <nav class="nav">
+            <a href="{% url 'kpi' %}" class="nav__link">КПЭ</a>
+            <a href="{% url 'tables' %}" class="nav__link">Оборудование</a>
+            <a href="#" class="nav__link">Контакты</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      {% block content %}
+    {% endblock %}
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
